@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-labelledby="t">
+<title id="t">Ilustración de un coche conectado a un equipo de diagnosis electrónica</title>
+<defs>
+<linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6f9"/><stop offset="1" stop-color="#cfd5de"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9fb3c8" stop-opacity=".75"/><stop offset="1" stop-color="#5d6f82" stop-opacity=".55"/></linearGradient>
+<radialGradient id="rim"><stop offset="0" stop-color="#eef1f5"/><stop offset="1" stop-color="#aab2be"/></radialGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="6" dy="10" stdDeviation="9" flood-color="#9aa3b2" flood-opacity=".55"/></filter>
+</defs>
+<ellipse cx="300" cy="252" rx="250" ry="14" fill="#b9c0cb" opacity=".55"/>
+<g filter="url(#sh)">
+<path d="M40 190 Q40 156 76 150 L170 138 Q212 88 280 82 L390 82 Q446 86 488 132 L560 142 Q598 150 598 184 L598 200 Q598 210 586 210 L530 210 A50 50 0 0 0 432 210 L198 210 A50 50 0 0 0 100 210 L54 210 Q40 210 40 198 Z" fill="url(#body)" stroke="#aeb6c2" stroke-width="2"/>
+<path d="M196 138 Q228 100 282 96 L320 96 L320 138 Z" fill="url(#glass)"/>
+<path d="M336 96 L386 96 Q432 100 462 138 L336 138 Z" fill="url(#glass)"/>
+<path d="M60 172 L120 168" stroke="#d42a20" stroke-width="6" stroke-linecap="round"/>
+<path d="M566 160 L590 164" stroke="#f2b134" stroke-width="6" stroke-linecap="round"/>
+<path d="M200 162 L560 162" stroke="#b7bfca" stroke-width="2"/>
+<circle cx="149" cy="210" r="40" fill="#3a3f47"/><circle cx="149" cy="210" r="22" fill="url(#rim)"/><circle cx="149" cy="210" r="6" fill="#6b717c"/>
+<circle cx="481" cy="210" r="40" fill="#3a3f47"/><circle cx="481" cy="210" r="22" fill="url(#rim)"/><circle cx="481" cy="210" r="6" fill="#6b717c"/>
+</g>
+<path d="M250 170 C230 230 200 250 170 262" fill="none" stroke="#2b2f36" stroke-width="4" stroke-linecap="round"/>
+<g filter="url(#sh)">
+<rect x="86" y="236" width="96" height="58" rx="12" fill="#2b2f36"/>
+<rect x="94" y="244" width="80" height="34" rx="6" fill="#11161c"/>
+<path d="M100 262 h12 l6 -10 l8 20 l6 -12 h8 l4 -4 h22" fill="none" stroke="#3ee07a" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="166" cy="286" r="3" fill="#d42a20"/>
+</g>
+<g fill="none" stroke="#d42a20" stroke-linecap="round" opacity=".85">
+<path d="M262 52 a26 26 0 0 1 36 0" stroke-width="5"/>
+<path d="M250 38 a44 44 0 0 1 60 0" stroke-width="5" opacity=".6"/>
+<path d="M238 24 a62 62 0 0 1 84 0" stroke-width="5" opacity=".35"/>
+</g>
+</svg>
