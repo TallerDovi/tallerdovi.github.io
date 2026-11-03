@@ -101,7 +101,7 @@
 --in-sm:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl);
 color-scheme:light}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{background:var(--bg);color:var(--text);font-family:'Barlow',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
@@ -110,9 +110,9 @@ a{color:inherit}
 
 /* Cabecera translúcida */
 header{position:sticky;top:0;z-index:20;background:rgba(230,233,239,.6);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--glass-b);box-shadow:0 8px 20px -12px var(--sd)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
-.logo{display:block;padding:8px 16px;border-radius:16px;box-shadow:var(--up-sm);background:var(--bg)}
-.logo img{height:34px;width:auto}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:88px}
+.logo{display:block;padding:10px 20px;border-radius:16px;box-shadow:var(--up-sm);background:var(--bg)}
+.logo img{height:46px;width:auto}
 nav{display:flex;gap:12px}
 nav a{font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.9rem;color:var(--soft);text-decoration:none;padding:8px 16px;border-radius:12px;background:var(--glass);border:1px solid var(--glass-b);transition:box-shadow .2s,color .2s}
 nav a:hover{color:var(--red);box-shadow:var(--up-sm)}
@@ -132,6 +132,7 @@ nav a:active{box-shadow:var(--in-sm)}
 .hero .b2{width:360px;height:360px;background:rgba(120,140,170,.4);bottom:120px;left:-160px}
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
 .panel{position:relative;border-radius:32px;padding:48px 44px;background:var(--glass);border:1px solid var(--glass-b);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);box-shadow:var(--up)}
+.panel .brand{width:min(460px,100%);margin:0 0 26px -6px;filter:drop-shadow(4px 6px 8px rgba(120,130,150,.35))}
 .kicker{display:inline-block;font-family:'Barlow Condensed',sans-serif;color:var(--red);text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-size:.9rem;padding:6px 16px;border-radius:999px;box-shadow:var(--in-sm);background:rgba(230,233,239,.6)}
 h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.3rem,5vw,3.6rem);line-height:1;text-transform:uppercase;margin:20px 0 18px;color:var(--text)}
 h1 em{font-style:normal;color:var(--red)}
@@ -204,7 +205,7 @@ iframe{display:block;width:100%;height:340px;border:0;border-radius:18px;filter:
 
 footer{padding:30px 0 40px;color:var(--muted);font-size:.9rem}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
-footer img{height:26px;width:auto;opacity:.85}
+footer img{height:40px;width:auto}
 footer a{color:var(--soft);text-decoration:none;padding:8px 16px;border-radius:12px;box-shadow:var(--up-sm);display:inline-block}
 footer a:active{box-shadow:var(--in-sm)}
 
@@ -213,7 +214,7 @@ footer a:active{box-shadow:var(--in-sm)}
 
 a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offset:3px}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-art{max-width:520px;margin:0 auto}.hero-art img{width:100%;margin:0}.steps{grid-template-columns:1fr}}
-@media(max-width:760px){nav{display:none}.about,.contact{grid-template-columns:1fr}.hero{padding:26px 0 40px}.panel{padding:30px 22px;border-radius:24px}.stats{grid-template-columns:1fr;gap:16px}.float-call{display:block}footer{padding-bottom:100px}.logo img{height:28px}}
+@media(max-width:760px){nav{display:none}.about,.contact{grid-template-columns:1fr}.hero{padding:26px 0 40px}.panel{padding:30px 22px;border-radius:24px}.stats{grid-template-columns:1fr;gap:16px}.float-call{display:block}footer{padding-bottom:100px}.logo img{height:36px}header .wrap{height:76px}.panel .brand{margin-left:-4px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -238,6 +239,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offse
   <div class="wrap">
     <div class="hero-grid">
       <div class="panel">
+        <picture><source srcset="img/logo-taller-dovi.webp" type="image/webp"><img class="brand" src="img/logo-taller-dovi.png" alt="Taller Dovi, taller mecánico en Sax" width="600" height="125"></picture>
         <div class="kicker">Sax · Alicante · Más de 42 años</div>
         <h1>Taller mecánico en <em>Sax</em> de confianza</h1>
         <p>Taller multimarca familiar especializado en diagnosis electrónica y mecánica de vehículos europeos. Te decimos qué tiene tu coche, cuánto cuesta arreglarlo y lo dejamos listo. Y si toca ITV, te lo llevamos nosotros.</p>
