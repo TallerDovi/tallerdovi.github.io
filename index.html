@@ -35,49 +35,73 @@
 }
 </script>
 <style>
-:root{--bg:#0e0e0e;--panel:#181818;--line:#2a2a2a;--red:#e63228;--white:#f2efea;--muted:#9a9a9a}
+:root{--bg:#e6e9ef;--sl:#ffffff;--sd:#c2c8d2;--text:#2b2f36;--soft:#4a505a;--muted:#6b717c;--red:#d42a20;--red2:#b8231a;
+--up:8px 8px 18px var(--sd),-8px -8px 18px var(--sl);
+--up-sm:4px 4px 9px var(--sd),-4px -4px 9px var(--sl);
+--in:inset 6px 6px 12px var(--sd),inset -6px -6px 12px var(--sl);
+--in-sm:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl);
+color-scheme:light}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--white);font-family:'Barlow',system-ui,sans-serif;line-height:1.6}
+body{background:var(--bg);color:var(--text);font-family:'Barlow',system-ui,sans-serif;line-height:1.6}
 a{color:inherit}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;z-index:10;background:rgba(14,14,14,.94);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
-.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.6rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+header{position:sticky;top:0;z-index:10;background:var(--bg);box-shadow:0 6px 14px -6px var(--sd)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:6px 18px;border-radius:14px;box-shadow:var(--up-sm)}
 .logo span{color:var(--red)}
-nav a{font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.9rem;color:var(--muted);text-decoration:none;margin-left:22px}
-nav a:hover{color:var(--white)}
-.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:14px 26px;border-radius:4px}
-.btn.ghost{background:transparent;border:1px solid var(--line)}
-.hero{padding:90px 0 70px;border-bottom:1px solid var(--line)}
-.kicker{font-family:'Barlow Condensed',sans-serif;color:var(--red);text-transform:uppercase;letter-spacing:.2em;font-weight:700}
-h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.6rem,7vw,4.8rem);line-height:1;text-transform:uppercase;margin:14px 0 20px}
-.hero p{max-width:620px;color:#cfccc6;font-size:1.15rem}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:50px}
-.stat b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2.4rem;line-height:1}
+nav{display:flex;gap:12px}
+nav a{font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.9rem;color:var(--soft);text-decoration:none;padding:8px 16px;border-radius:12px;box-shadow:var(--up-sm);transition:box-shadow .2s,color .2s}
+nav a:hover{color:var(--red)}
+nav a:active{box-shadow:var(--in-sm)}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:15px 28px;border-radius:16px;box-shadow:6px 6px 14px var(--sd),-6px -6px 14px var(--sl),inset 1px 1px 0 rgba(255,255,255,.25);transition:box-shadow .2s,transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:none;box-shadow:inset 4px 4px 8px var(--red2),inset -3px -3px 6px #e8473d}
+.btn.ghost{background:var(--bg);color:var(--text);box-shadow:var(--up)}
+.btn.ghost:hover{color:var(--red)}
+.btn.ghost:active{box-shadow:var(--in)}
+.hero{padding:70px 0 60px}
+.hero .panel{border-radius:32px;padding:56px 48px;box-shadow:var(--up)}
+.kicker{display:inline-block;font-family:'Barlow Condensed',sans-serif;color:var(--red);text-transform:uppercase;letter-spacing:.2em;font-weight:700;font-size:.9rem;padding:6px 16px;border-radius:999px;box-shadow:var(--in-sm)}
+h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1;text-transform:uppercase;margin:22px 0 20px;color:var(--text);text-shadow:2px 2px 3px var(--sd),-2px -2px 3px var(--sl)}
+.hero p{max-width:620px;color:var(--soft);font-size:1.15rem}
+.cta{display:flex;gap:18px;flex-wrap:wrap;margin-top:32px}
+.stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:46px}
+.stat{padding:18px 26px;border-radius:20px;box-shadow:var(--in);min-width:150px}
+.stat b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;line-height:1.1;color:var(--text)}
 .stat span{color:var(--muted);font-size:.9rem}
-section{padding:70px 0;border-bottom:1px solid var(--line)}
-h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:2.2rem;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:24px}
+section{padding:60px 0}
+h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:2.2rem;margin-bottom:30px;color:var(--text)}
+h2::after{content:"";display:block;width:56px;height:8px;margin-top:10px;border-radius:8px;background:var(--red);box-shadow:var(--up-sm)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.card{background:var(--bg);border-radius:24px;padding:28px;box-shadow:var(--up);transition:box-shadow .25s}
+.card:hover{box-shadow:var(--in)}
 .card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;text-transform:uppercase;margin-bottom:8px}
-.card p{color:#c3c0ba}
-.card.itv{border-color:var(--red);background:linear-gradient(160deg,#2a1111,#181818)}
+.card h3::before{content:"";display:block;width:14px;height:14px;border-radius:50%;margin-bottom:14px;background:var(--bg);box-shadow:var(--in-sm),0 0 0 3px var(--bg)}
+.card p{color:var(--soft)}
 .card.itv h3{color:var(--red)}
+.card.itv h3::before{background:var(--red);box-shadow:var(--up-sm)}
+.card.itv{box-shadow:var(--up),inset 0 0 0 2px rgba(212,42,32,.35)}
+.card.itv:hover{box-shadow:var(--in),inset 0 0 0 2px rgba(212,42,32,.35)}
 .about{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
-.about p{color:#cfccc6;margin-bottom:14px}
-ul.facts{list-style:none}
-ul.facts li{padding:12px 0;border-bottom:1px solid var(--line);color:#cfccc6}
-ul.facts li b{color:var(--white)}
-.contact{display:grid;grid-template-columns:1fr 1.3fr;gap:30px}
-.contact p{margin-bottom:12px;color:#cfccc6}
-.contact a.tel{font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:800;text-decoration:none;color:var(--white)}
-iframe{width:100%;height:320px;border:0;border-radius:6px;filter:grayscale(.3)}
-footer{padding:30px 0;color:var(--muted);font-size:.9rem}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-footer a{color:var(--muted)}
-@media(max-width:760px){nav{display:none}.about,.contact{grid-template-columns:1fr}.hero{padding:60px 0 50px}}
+.about p{color:var(--soft);margin-bottom:14px}
+ul.facts{list-style:none;padding:10px 26px;border-radius:24px;box-shadow:var(--in)}
+ul.facts li{padding:14px 0;color:var(--soft);border-bottom:2px solid var(--bg);box-shadow:0 1px 0 var(--sl),0 -1px 0 var(--sd) inset}
+ul.facts li:last-child{border:0;box-shadow:none}
+ul.facts li b{color:var(--text)}
+ul.facts a{color:var(--red);font-weight:600;text-decoration:none}
+.contact{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:start}
+.contact p{margin-bottom:14px;color:var(--soft)}
+.contact a.tel{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:800;text-decoration:none;color:var(--red);padding:6px 22px;border-radius:18px;box-shadow:var(--up)}
+.contact a.tel:active{box-shadow:var(--in)}
+.map{padding:14px;border-radius:28px;box-shadow:var(--in)}
+iframe{display:block;width:100%;height:320px;border:0;border-radius:18px;filter:grayscale(.2)}
+footer{padding:30px 0 40px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+footer a{color:var(--soft);text-decoration:none;padding:8px 16px;border-radius:12px;box-shadow:var(--up-sm);display:inline-block}
+footer a:active{box-shadow:var(--in-sm)}
+a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+@media(max-width:760px){nav{display:none}.about,.contact{grid-template-columns:1fr}.hero{padding:30px 0 40px}.hero .panel{padding:36px 22px;border-radius:24px}.stat{flex:1 1 100%}}
 </style>
 </head>
 <body>
@@ -94,7 +118,7 @@ footer a{color:var(--muted)}
 
 <main>
 <div class="hero">
-  <div class="wrap">
+  <div class="wrap"><div class="panel">
     <div class="kicker">Sax · Alicante · Desde hace más de 36 años</div>
     <h1>Tu taller mecánico de confianza en Sax</h1>
     <p>Taller multimarca familiar especializado en diagnosis electrónica y mecánica de vehículos europeos. Te decimos qué tiene tu coche, cuánto cuesta arreglarlo y lo dejamos listo.</p>
@@ -107,7 +131,7 @@ footer a{color:var(--muted)}
       <div class="stat"><b>4,9 ★</b><span>valoración en Google</span></div>
       <div class="stat"><b>Grupo ASER</b><span>red de talleres</span></div>
     </div>
-  </div>
+  </div></div>
 </div>
 
 <section id="servicios">
@@ -169,7 +193,7 @@ footer a{color:var(--muted)}
       <p>Av. Historiador Bernardo Herrero, 25<br>03630 Sax (Alicante)</p>
       <p><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Taller+Dovi+Sax" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
     </div>
-    <iframe title="Mapa de Taller Dovi en Sax" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Taller+Dovi,+Av.+Historiador+Bernardo+Herrero+25,+Sax&output=embed"></iframe>
+    <div class="map"><iframe title="Mapa de Taller Dovi en Sax" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Taller+Dovi,+Av.+Historiador+Bernardo+Herrero+25,+Sax&output=embed"></iframe></div>
   </div>
 </section>
 </main>
