@@ -104,13 +104,13 @@ color-scheme:light}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{background:var(--bg);color:var(--text);font-family:'Barlow',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
 /* Fondo: fachada del taller difuminada. Ordenador: fija, empieza justo bajo el encabezado y ocupa todo el ancho. Móvil: ancho completo y patrón de franjas hasta el final */
-.bg-fachada{position:fixed;top:89px;left:0;right:0;bottom:0;z-index:-2;pointer-events:none;overflow:hidden}
-.bg-fachada::before{content:"";position:absolute;inset:0 -20px -20px;background:url(img/fondo-fachada.webp) center top/cover no-repeat;filter:blur(6px) saturate(1.1)}
+.bg-fachada{position:fixed;top:89px;left:0;right:0;bottom:0;z-index:-2;pointer-events:none;overflow:hidden;container-type:size}
+.bg-fachada::before{content:"";position:absolute;inset:-6px -8px -20px;background:#d8dadd url(img/fondo-fachada.webp) no-repeat;background-size:105.86cqw auto;background-position:calc(8px - 2.96cqw) calc(6px - 4.41cqw);filter:blur(5px) saturate(1.1)}
 @media(max-width:760px){
 body{position:relative}
 .bg-fachada{position:absolute;inset:0;background:#e2e3e6}
-.bg-fachada::before{inset:-10px -10px auto;height:calc((100vw + 20px)*2/3);background-size:100% 100%;-webkit-mask-image:linear-gradient(#000 72%,transparent 90%);mask-image:linear-gradient(#000 72%,transparent 90%)}
-.bg-fachada::after{content:"";position:absolute;left:-10px;right:-10px;top:calc(100vw*2/3*.74);bottom:0;z-index:-1;filter:blur(8px);
+.bg-fachada::before{inset:72px 0 auto;height:calc(100cqw*.6);background-size:105.86cqw auto;background-position:-2.96cqw -4.41cqw;-webkit-mask-image:linear-gradient(#000 72%,transparent 90%);mask-image:linear-gradient(#000 72%,transparent 90%)}
+.bg-fachada::after{content:"";position:absolute;left:-10px;right:-10px;top:calc(77px + 100vw*.6*.74);bottom:0;z-index:-1;filter:blur(8px);
 background:repeating-linear-gradient(180deg,#e4e5e7 0 80px,rgba(209,40,46,.38) 110px 190px,#e4e5e7 220px)}
 }
 body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(230,233,239,.55),rgba(230,233,239,.72))}
