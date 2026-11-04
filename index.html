@@ -120,7 +120,7 @@ body{background:var(--bg);color:var(--text);font-family:'Barlow',system-ui,sans-
 body{position:relative}
 .bg-fachada{position:absolute;inset:0;background:#e2e3e6}
 .bg-fachada::before{inset:72px 0 auto;height:calc(100cqw*.6);background-size:105.86cqw auto;background-position:-2.96cqw -4.41cqw;-webkit-mask-image:linear-gradient(#000 72%,transparent 90%);mask-image:linear-gradient(#000 72%,transparent 90%)}
-.bg-fachada::after{content:"";position:absolute;left:0;right:0;top:calc(72px + 43.28cqw);bottom:0;z-index:-1;background:url(img/fachada-patron.webp) 0 0/100% auto repeat-y;filter:blur(5px) saturate(1.1)}
+.bg-fachada::after{content:"";position:absolute;left:-24px;right:-24px;top:calc(72px + 43.28cqw);bottom:0;z-index:-1;background:url(img/fachada-patron.webp) 24px 0/100cqw auto repeat-y;filter:blur(14px) saturate(.9);opacity:.85}
 }
 body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(230,233,239,.55),rgba(230,233,239,.72))}
 img{max-width:100%;height:auto;display:block}
@@ -250,7 +250,8 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offse
 
 /* Móvil: cristal translúcido como en ordenador y ajustes de maquetación */
 @media(max-width:760px){
-body::after{background:linear-gradient(180deg,rgba(230,233,239,.5),rgba(230,233,239,.64))}
+body::after{background:linear-gradient(180deg,rgba(230,233,239,.5),rgba(230,233,239,.66))}
+.bg-fachada::before{filter:blur(8px) saturate(1.05)}
 .card,details,.step,ul.facts,.map,.box,.stat,.about>div:first-child,.contact>div:first-child,footer .wrap,.glass-m{background:rgba(236,239,244,.6);border:1px solid var(--glass-b);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%)}
 .card{box-shadow:6px 6px 16px rgba(150,158,172,.45),-4px -4px 12px rgba(255,255,255,.6)}
 details[open]{background:rgba(236,239,244,.72)}
