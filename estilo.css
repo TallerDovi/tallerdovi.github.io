@@ -1,4 +1,11 @@
-:root{--bg:#e6e9ef;--sl:#ffffff;--sd:#c2c8d2;--text:#2b2f36;--soft:#4a505a;--muted:#646a75;--red:#d42a20;--red2:#b8231a;
+/* Fuentes alojadas en la propia web (sin Google Fonts) */
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(/barlow-400.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url(/barlow-500.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(/barlow-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url(/barlow-condensed-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url(/barlow-condensed-700.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url(/barlow-condensed-800.woff2) format('woff2')}
+:root{--bg:#e6e9ef;--sl:#ffffff;--sd:#c2c8d2;--text:#2b2f36;--soft:#4a505a;--muted:#5a606b;--red:#bf2419;--red2:#a51f16;
 --glass:rgba(255,255,255,.42);--glass-b:rgba(255,255,255,.65);
 --up:8px 8px 18px var(--sd),-8px -8px 18px var(--sl);
 --up-sm:4px 4px 9px var(--sd),-4px -4px 9px var(--sl);
@@ -62,7 +69,7 @@ h1 em{font-style:normal;color:var(--red)}
 @keyframes glow{50%{opacity:.55}}
 @media(prefers-reduced-motion:reduce){.lift,.lamp-glow{animation:none}}
 .stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
-.stat{padding:20px 26px;border-radius:22px;box-shadow:var(--in)}
+.stat{padding:20px 26px;border-radius:22px;box-shadow:var(--in);background:rgba(230,233,239,.82)}
 .stat b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;line-height:1.1;color:var(--text)}
 .stat span{color:var(--muted);font-size:.92rem}
 
@@ -120,6 +127,12 @@ details p{color:var(--soft);padding:0 0 18px}
 .contact a.tel:active{box-shadow:var(--in)}
 .map{padding:14px;border-radius:28px;box-shadow:var(--in)}
 iframe{display:block;width:100%;height:340px;border:0;border-radius:18px;filter:grayscale(.2)}
+.map-ph{min-height:340px;border-radius:18px;padding:34px 30px;display:flex;flex-direction:column;justify-content:center;background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 14px,rgba(200,206,216,.35) 14px 28px)}
+.map-ph p{color:var(--soft);margin-bottom:12px}
+.map-ph a{color:var(--red)}
+.map-ph .btn{color:#fff}.map-ph .btn.ghost{color:var(--text)}
+button.btn{border:0;cursor:pointer;font-size:1rem}
+.rev-note{font-size:.85rem;color:var(--muted);margin-top:14px}
 
 footer{padding:30px 0 40px;color:var(--muted);font-size:.9rem}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
@@ -128,7 +141,7 @@ footer a{color:var(--soft);text-decoration:none;padding:8px 16px;border-radius:1
 footer a:active{box-shadow:var(--in-sm)}
 
 /* Botón flotante de llamada (móvil), translúcido */
-.float-call{display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:30;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;color:#fff;padding:15px;border-radius:18px;background:rgba(212,42,32,.82);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 24px rgba(120,40,30,.3)}
+.float-call{display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:30;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;color:#fff;padding:15px;border-radius:18px;background:rgba(176,32,22,.94);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 24px rgba(120,40,30,.3)}
 
 .more{display:inline-block;margin-top:14px;font-weight:600;color:var(--red);text-decoration:none}
 .card.itv .more{color:#fff}
@@ -141,7 +154,8 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offse
 
 /* Páginas interiores */
 .crumbs{font-size:.9rem;color:var(--muted);margin:26px 0 0}
-.crumbs a{color:var(--soft);text-decoration:none}
+.crumbs a{color:var(--soft);text-decoration:underline;text-underline-offset:3px}
+.crumbs{color:var(--soft)}
 .crumbs a:hover{color:var(--red)}
 .page-hero{padding:22px 0 30px}
 .page-hero .panel{max-width:860px}
