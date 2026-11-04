@@ -120,8 +120,7 @@ body{background:var(--bg);color:var(--text);font-family:'Barlow',system-ui,sans-
 body{position:relative}
 .bg-fachada{position:absolute;inset:0;background:#e2e3e6}
 .bg-fachada::before{inset:72px 0 auto;height:calc(100cqw*.6);background-size:105.86cqw auto;background-position:-2.96cqw -4.41cqw;-webkit-mask-image:linear-gradient(#000 72%,transparent 90%);mask-image:linear-gradient(#000 72%,transparent 90%)}
-.bg-fachada::after{content:"";position:absolute;left:-10px;right:-10px;top:calc(77px + 100vw*.6*.74);bottom:0;z-index:-1;filter:blur(8px);
-background:repeating-linear-gradient(180deg,#e4e5e7 0 80px,rgba(209,40,46,.38) 110px 190px,#e4e5e7 220px)}
+.bg-fachada::after{content:"";position:absolute;left:0;right:0;top:calc(72px + 43.28cqw);bottom:0;z-index:-1;background:url(img/fachada-patron.webp) 0 0/100% auto repeat-y;filter:blur(5px) saturate(1.1)}
 }
 body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(230,233,239,.55),rgba(230,233,239,.72))}
 img{max-width:100%;height:auto;display:block}
@@ -244,10 +243,37 @@ footer a:active{box-shadow:var(--in-sm)}
 .more{display:inline-block;margin-top:14px;font-weight:600;color:var(--red);text-decoration:none}
 .card.itv .more{color:#fff}
 .foot-nav{display:flex;flex-wrap:wrap;gap:10px;width:100%}
-.foot-nap{width:100%;color:var(--soft)}
+.foot-nap{width:100%;color:var(--soft);display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
 a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offset:3px}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-art{max-width:520px;margin:0 auto}.steps{grid-template-columns:1fr}}
 @media(max-width:760px){nav{display:none}.about,.contact{grid-template-columns:1fr}.hero{padding:26px 0 40px}.panel{padding:30px 22px;border-radius:24px}.stats{grid-template-columns:1fr;gap:16px}.float-call{display:block}footer{padding-bottom:100px}.logo img{height:36px}header .wrap{height:76px}}
+
+/* Móvil: cristal translúcido como en ordenador y ajustes de maquetación */
+@media(max-width:760px){
+body::after{background:linear-gradient(180deg,rgba(230,233,239,.5),rgba(230,233,239,.64))}
+.card,details,.step,ul.facts,.map,.box,.stat,.about>div:first-child,.contact>div:first-child,footer .wrap,.glass-m{background:rgba(236,239,244,.6);border:1px solid var(--glass-b);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%)}
+.card{box-shadow:6px 6px 16px rgba(150,158,172,.45),-4px -4px 12px rgba(255,255,255,.6)}
+details[open]{background:rgba(236,239,244,.72)}
+.panel{background:rgba(240,242,246,.5)}
+section{padding:44px 0}
+h2{font-size:1.85rem}
+.kicker{letter-spacing:.1em;font-size:.78rem;padding:6px 12px}
+.cta,.contact .links{flex-direction:column;gap:12px}
+.cta .btn,.contact .links .btn,.map-ph .btn{text-align:center;width:100%}
+.map-ph .links{flex-direction:column;display:flex;gap:12px}
+.stats{grid-template-columns:repeat(3,1fr)!important;gap:10px!important;margin-top:24px}
+.stat{padding:14px 10px;text-align:center;border-radius:18px}
+.stat b{font-size:1.45rem}
+.stat span{font-size:.75rem;line-height:1.25;display:block}
+.contact a.tel{font-size:1.9rem}
+.float-call{background:rgba(176,32,22,.9);left:12px;right:12px;bottom:12px;padding:14px}
+footer .wrap{gap:12px}
+.foot-nap{gap:8px 10px}
+.foot-nap>span{width:100%}
+.about>div:first-child,.contact>div:first-child{padding:26px 20px;border-radius:24px}
+footer .wrap{padding:24px 18px;border-radius:24px;margin:0 16px;width:auto}
+.lead,.step p,section>.wrap>p{color:var(--text)}
+}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -475,7 +501,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offse
 <footer>
   <div class="wrap">
     <img src="img/logo-taller-dovi.png" alt="Taller Dovi" width="600" height="125" loading="lazy">
-    <span class="foot-nap"><b>Taller Dovi</b> · Av. Historiador Bernardo Herrero, 25, 03630 Sax (Alicante) · <a href="tel:+34965474129">965 474 129</a> · <a href="mailto:talleresdovi@hotmail.com">talleresdovi@hotmail.com</a> · L–V 9:00–13:00 y 16:00–20:00</span>
+    <span class="foot-nap"><b>Taller Dovi</b><span>Av. Historiador Bernardo Herrero, 25, 03630 Sax (Alicante)</span><span>L–V 9:00–13:00 y 16:00–20:00</span><a href="tel:+34965474129">965 474 129</a><a href="mailto:talleresdovi@hotmail.com">talleresdovi@hotmail.com</a></span>
     <div class="foot-nav" role="navigation" aria-label="Servicios"><a href="/itv-sax">Servicio de ITV</a><a href="/diagnosis-coche-sax">Diagnosis electrónica</a><a href="/mecanica-sax">Mecánica general</a><a href="/electricidad-coche-sax">Electricidad del automóvil</a><a href="/mantenimiento-coche-sax">Mantenimiento y revisiones</a><a href="/sobre-nosotros">Sobre nosotros</a><a href="/aviso-legal">Aviso legal</a><a href="/privacidad">Política de privacidad</a><a href="/cookies">Cookies</a></div>
     <span>© Taller Dovi · Taller mecánico en Sax (Alicante)</span>
   </div>
