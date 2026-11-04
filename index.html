@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Taller mecánico en Sax (Alicante) | Taller Dovi · Diagnosis e ITV</title>
-<meta name="description" content="Taller Dovi: taller mecánico multimarca en Sax (Alicante) con más de 42 años de experiencia. Diagnosis electrónica, mecánica, electricidad, mantenimiento y te llevamos el coche a la ITV. Llama al 965 474 129.">
+<title>Taller mecánico en Sax · Diagnosis e ITV · Taller Dovi</title>
+<meta name="description" content="Taller mecánico multimarca en Sax con más de 42 años de experiencia. Diagnosis electrónica, mecánica y te llevamos el coche a la ITV. Cita: 965 474 129.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://tallerdovi.github.io/">
 <meta name="theme-color" content="#e6e9ef">
@@ -62,11 +62,11 @@
         "@type": "OfferCatalog",
         "name": "Servicios del taller",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Servicio de ITV: revisamos el vehículo, lo llevamos a la ITV y lo devolvemos"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Diagnosis electrónica multimarca"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mecánica general"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Electricidad del automóvil"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mantenimiento y revisiones"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Servicio de ITV: revisamos el vehículo, lo llevamos a la ITV y lo devolvemos", "url": "https://tallerdovi.github.io/itv-sax"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Diagnosis electrónica multimarca", "url": "https://tallerdovi.github.io/diagnosis-coche-sax"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mecánica general", "url": "https://tallerdovi.github.io/mecanica-sax"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Electricidad del automóvil", "url": "https://tallerdovi.github.io/electricidad-coche-sax"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mantenimiento y revisiones", "url": "https://tallerdovi.github.io/mantenimiento-coche-sax"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cambio de escobillas limpiaparabrisas"}}
         ]
       }
@@ -225,6 +225,10 @@ footer a:active{box-shadow:var(--in-sm)}
 /* Botón flotante de llamada (móvil), translúcido */
 .float-call{display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:30;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;color:#fff;padding:15px;border-radius:18px;background:rgba(212,42,32,.82);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 24px rgba(120,40,30,.3)}
 
+.more{display:inline-block;margin-top:14px;font-weight:600;color:var(--red);text-decoration:none}
+.card.itv .more{color:#fff}
+.foot-nav{display:flex;flex-wrap:wrap;gap:10px;width:100%}
+.foot-nap{width:100%;color:var(--soft)}
 a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offset:3px}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-art{max-width:520px;margin:0 auto}.steps{grid-template-columns:1fr}}
 @media(max-width:760px){nav{display:none}.about,.contact{grid-template-columns:1fr}.hero{padding:26px 0 40px}.panel{padding:30px 22px;border-radius:24px}.stats{grid-template-columns:1fr;gap:16px}.float-call{display:block}footer{padding-bottom:100px}.logo img{height:36px}header .wrap{height:76px}}
@@ -347,31 +351,37 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offse
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3h6v3H9z"/><path d="M9 13l2 2 4-4"/></svg></div>
         <h3>Te llevamos a la ITV</h3>
         <p>¿No puedes ir tú? Nos dejas el coche en el taller, lo revisamos, lo llevamos a la ITV y te lo devolvemos. Tú no tienes que hacer nada.</p>
+        <a class="more" href="/itv-sax">Ver servicio de ITV →</a>
       </article>
       <article class="card">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M6 10h3l2-3 2 6 2-3h3"/><path d="M9 20h6M12 16v4"/></svg></div>
         <h3>Diagnosis electrónica</h3>
         <p>Equipos de diagnosis profesional para localizar averías y testigos encendidos en todas las marcas, incluidas las averías complejas.</p>
+        <a class="more" href="/diagnosis-coche-sax">Más información →</a>
       </article>
       <article class="card">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
         <h3>Mecánica general</h3>
         <p>Motor, embrague, distribución, frenos, suspensión y dirección. Reparaciones con presupuesto previo.</p>
+        <a class="more" href="/mecanica-sax">Más información →</a>
       </article>
       <article class="card">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
         <h3>Electricidad del automóvil</h3>
         <p>Baterías, arranque, carga, iluminación y sistemas eléctricos y electrónicos del vehículo.</p>
+        <a class="more" href="/electricidad-coche-sax">Más información →</a>
       </article>
       <article class="card">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
         <h3>Mantenimiento y revisiones</h3>
         <p>Cambios de aceite y filtros, revisiones periódicas y puesta a punto según el plan del fabricante.</p>
+        <a class="more" href="/mantenimiento-coche-sax">Más información →</a>
       </article>
       <article class="card">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18a11 11 0 0 1 18 0"/><path d="M12 18L7.5 8.5"/><circle cx="12" cy="18" r="1.5"/></svg></div>
         <h3>Escobillas limpiaparabrisas</h3>
         <p>Cambio de escobillas para que veas bien con lluvia. Pregúntanos por otros recambios de mantenimiento.</p>
+        <a class="more" href="/mantenimiento-coche-sax">Ver mantenimiento →</a>
       </article>
     </div>
   </div>
@@ -394,7 +404,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offse
     <div>
       <h2>El taller</h2>
       <p>Taller Dovi es un taller familiar que lleva más de 42 años reparando coches en Sax. Trabajamos con todas las marcas y estamos especializados en diagnosis de vehículos europeos.</p>
-      <p>Formamos parte de la red de talleres Grupo ASER.</p>
+      <p>Formamos parte de la red de talleres Grupo ASER. <a class="more" href="/sobre-nosotros">Conoce nuestra historia →</a></p>
       <p>Solemos tener la agenda llena con antelación, así que te recomendamos llamar para pedir cita.</p>
       <p><b>Clientes de Sax y alrededores:</b></p>
       <div class="zonas"><span>Sax</span><span>Villena</span><span>Elda</span><span>Petrer</span><span>Salinas</span></div>
@@ -440,8 +450,9 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offse
 <footer>
   <div class="wrap">
     <img src="img/logo-taller-dovi.png" alt="Taller Dovi" width="600" height="125" loading="lazy">
+    <span class="foot-nap"><b>Taller Dovi</b> · Av. Historiador Bernardo Herrero, 25, 03630 Sax (Alicante) · <a href="tel:+34965474129">965 474 129</a></span>
+    <div class="foot-nav" role="navigation" aria-label="Servicios"><a href="/itv-sax">Servicio de ITV</a><a href="/diagnosis-coche-sax">Diagnosis electrónica</a><a href="/mecanica-sax">Mecánica general</a><a href="/electricidad-coche-sax">Electricidad del automóvil</a><a href="/mantenimiento-coche-sax">Mantenimiento y revisiones</a><a href="/sobre-nosotros">Sobre nosotros</a><a href="/privacidad.html">Política de privacidad</a></div>
     <span>© Taller Dovi · Taller mecánico en Sax (Alicante)</span>
-    <span><a href="privacidad.html">Política de privacidad</a></span>
   </div>
 </footer>
 
