@@ -103,10 +103,16 @@ color-scheme:light}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{background:var(--bg);color:var(--text);font-family:'Barlow',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
-/* Fondo: fachada del taller difuminada */
-/* Fondo: fachada del taller completa, difuminada y con un ligero movimiento al hacer scroll */
-body::before{content:"";position:fixed;inset:-60px;z-index:-3;background:url(img/fondo-fachada.webp) center/cover no-repeat;filter:blur(40px) saturate(1.1);opacity:.7}
-.bg-fachada{position:fixed;left:50%;top:calc(50% + 7vh);z-index:-2;width:min(100vw,135vh);aspect-ratio:3/2;background:url(img/fondo-fachada.webp) center/100% 100% no-repeat;filter:blur(5px) saturate(1.1);transform:translate(-50%,-50%);will-change:transform;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse 75% 75% at 50% 50%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 75% 75% at 50% 50%,#000 60%,transparent 100%)}
+/* Fondo: fachada del taller difuminada. Ordenador: fija y a pantalla completa. Móvil: ancho completo y patrón de franjas hasta el final */
+.bg-fachada{position:fixed;inset:-30px;z-index:-2;pointer-events:none;overflow:hidden}
+.bg-fachada::before{content:"";position:absolute;inset:0;background:url(img/fondo-fachada.webp) center/cover no-repeat;filter:blur(6px) saturate(1.1)}
+@media(max-width:760px){
+body{position:relative}
+.bg-fachada{position:absolute;inset:0;background:#e2e3e6}
+.bg-fachada::before{inset:-10px -10px auto;height:calc((100vw + 20px)*2/3);background-size:100% 100%;-webkit-mask-image:linear-gradient(#000 72%,transparent 90%);mask-image:linear-gradient(#000 72%,transparent 90%)}
+.bg-fachada::after{content:"";position:absolute;left:-10px;right:-10px;top:calc(100vw*2/3*.74);bottom:0;z-index:-1;filter:blur(8px);
+background:repeating-linear-gradient(180deg,#e4e5e7 0 80px,rgba(209,40,46,.38) 110px 190px,#e4e5e7 220px)}
+}
 body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(230,233,239,.55),rgba(230,233,239,.72))}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
@@ -440,10 +446,5 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offse
 </footer>
 
 <a class="float-call" href="tel:+34965474129">Llamar al taller · 965 474 129</a>
-<script>
-(function(){var el=document.querySelector('.bg-fachada');if(!el||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var t=false;
-function u(){var y=Math.min(window.scrollY*0.05,60);el.style.transform='translate(-50%,calc(-50% - '+y+'px))';t=false}
-addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u)}},{passive:true})})();
-</script>
 </body>
 </html>
