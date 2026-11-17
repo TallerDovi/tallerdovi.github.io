@@ -152,10 +152,11 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offse
 
 /* Móvil: cristal translúcido como en ordenador y ajustes de maquetación */
 @media(max-width:760px){
-.card,details,.step,ul.facts,.map,.box,.stat,.about>div:first-child,.contact>div:first-child,footer .wrap,.glass-m{background:rgba(236,239,244,.6);border:1px solid var(--glass-b);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%)}
+.card,details,.step,ul.facts,.map,.box,.stat,.about>div:first-child,.contact>div:first-child,footer .wrap,.glass-m{background:rgba(236,239,244,.44);border:1px solid var(--glass-b);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%)}
 .card{box-shadow:6px 6px 16px rgba(150,158,172,.45),-4px -4px 12px rgba(255,255,255,.6)}
-details[open]{background:rgba(236,239,244,.72)}
-.panel{background:rgba(240,242,246,.5)}
+details[open]{background:rgba(236,239,244,.6)}
+.panel{background:rgba(240,242,246,.36)}
+body::after{background:linear-gradient(180deg,rgba(230,233,239,.36),rgba(230,233,239,.5))}
 section{padding:44px 0}
 h2{font-size:1.85rem}
 .kicker{letter-spacing:.1em;font-size:.78rem;padding:6px 12px}
@@ -165,7 +166,7 @@ h2{font-size:1.85rem}
 .stats{grid-template-columns:repeat(3,1fr)!important;gap:10px!important;margin-top:24px}
 .stat{padding:14px 10px;text-align:center;border-radius:18px}
 .stat b{font-size:1.45rem}
-.stat span{font-size:.75rem;line-height:1.25;display:block}
+.stat span{font-size:.75rem;line-height:1.25;display:block;color:var(--soft)}
 .stat-logo{align-items:center}.stat-logo img{height:auto;width:100%;max-width:120px;margin:0 0 8px}
 .contact a.tel{font-size:1.9rem}
 .float-call{background:rgba(176,32,22,.9);left:12px;right:12px;bottom:12px;padding:14px}
